@@ -1,17 +1,17 @@
-import Adc from './core/adc';
+import Fetchs from './core/Fetchs';
 import DEFAULTS from './defaults';
 
-let adc = new Adc(DEFAULTS);
+let fetchs = new Fetchs(DEFAULTS);
 
-adc.create = function(config) {
-	return new Adc(config);
+fetchs.create = function(config) {
+	return new Fetchs(config);
 };
 
-adc.all = function(promises) {
+fetchs.all = function(promises) {
 	return Promise.all(promises);
 };
-adc.race = function(promises) {
+fetchs.race = function(promises) {
 	return Promise.race(promises);
 };
 
-export default adc;
+export default fetchs;

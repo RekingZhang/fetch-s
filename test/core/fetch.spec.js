@@ -1,5 +1,5 @@
 import fetchMock from 'fetch-mock';
-import _fetch from './../../src/core/fetch';
+import _fetch from './../../src/core/fetchTimeout';
 
 describe('test _fetch ...', () => {
 	beforeEach(function() {

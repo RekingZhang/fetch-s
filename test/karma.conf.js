@@ -11,7 +11,7 @@ module.exports = function(config) {
 		frameworks: ['jasmine'],
 
 		// list of files / patterns to load in the browser
-		files: ['test/**/*.spec.js'],
+		files: ['../test/**/*.spec.js'],
 
 		// list of files / patterns to exclude
 		exclude: [],
@@ -19,12 +19,12 @@ module.exports = function(config) {
 		// preprocess matching files before serving them to the browser
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
-			'test/**/*.spec.js': ['webpack'],
-			'src/*.js': ['coverage']
+			'../test/**/*.spec.js': ['webpack'],
+			'../src/**/*.js': ['coverage']
 		},
 		coverageReporter: {
 			type: 'lcov',
-			dir: 'coverage/',
+			dir: '../coverage/',
 			subdir: '.'
 		},
 		// test results reporter to use
@@ -62,7 +62,11 @@ module.exports = function(config) {
 					{
 						test: /\.js$/,
 						loader: 'babel-loader',
-						exclude: /(node_modules)/
+						exclude: /(node_modules)/,
+						query: {
+							presets: ['env'],
+							plugins: ['istanbul']
+						  }
 					}
 				]
 			}

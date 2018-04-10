@@ -9,7 +9,7 @@ describe('GET单元测试', () => {
 		};
 		const body = { foo: 'bar' };
 
-		fetchMock.get('http://www.example.com/?', {
+		fetchMock.get('http://www.example.com/', {
 			status: 200,
 			body,
 			headers

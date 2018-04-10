@@ -9,7 +9,7 @@ describe('POST单元测试', () => {
 		};
 		const body = { foo: 'bar' };
 
-		fetchMock.post('http://www.example.com/?', {
+		fetchMock.post('http://www.example.com/', {
 			status: 200,
 			body,
 			headers

@@ -22,6 +22,9 @@ function encode(val) {
  * @return {String} 序列化后的参数字符串
  */
 function paramsSerializer(data) {
+	if (types.isUndefined(data)) {
+		return '';
+	}
 	let parmas = [];
 
 	if (types.isURLSearchParams(data)) {

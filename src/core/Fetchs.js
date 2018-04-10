@@ -4,10 +4,10 @@ import types from '../utils/type';
 import DEFAULTS from '../defaults';
 
 /**
- * ADC Class
+ * Fetchs Class
  *
  */
-class Adc {
+class Fetchs {
 	constructor(config) {
 		this.defaults = config;
 		this.interceptors = {
@@ -116,4 +116,4 @@ class Adc {
 	}
 }
 
-export default Adc;
+export default Fetchs;
