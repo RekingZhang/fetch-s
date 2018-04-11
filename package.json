@@ -1,6 +1,6 @@
 {
   "name": "fetch-s",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Fetch-based HTTP requests",
   "main": "index.js",
   "scripts": {
