@@ -1,5 +1,4 @@
 import buildURL from './../utils/buildURL';
-import types from './../utils/type';
 import { transformRequest } from './../utils/transform';
 import _fetch from './fetchTimeout';
 import jsonp from './jsonp';

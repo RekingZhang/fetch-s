@@ -1,5 +1,5 @@
 import fetchMock from 'fetch-mock';
-import adc from './../../src/index';
+import fetchs from './../../src/index';
 
 describe('GET单元测试', () => {
 	beforeEach(function() {
@@ -20,7 +20,7 @@ describe('GET单元测试', () => {
 		fetchMock.restore();
 	});
 	it('json', async () => {
-		await adc
+		await fetchs
 			.get('http://www.example.com/', {
 				timeout: 1000
 			})
@@ -32,7 +32,7 @@ describe('GET单元测试', () => {
 			});
 	});
 	it('timeout', async () => {
-		await adc
+		await fetchs
 			.get('http://www.example.com/', {
 				dataType: 'json',
 				timeout: 0

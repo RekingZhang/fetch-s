@@ -4,6 +4,7 @@
 [![Build Status](https://travis-ci.org/RekingZhang/fetch-s.svg?branch=master)](https://travis-ci.org/RekingZhang/fetch-s)
 [![Coverage Status](https://coveralls.io/repos/github/RekingZhang/fetch-s/badge.svg?branch=master)](https://coveralls.io/github/RekingZhang/fetch-s?branch=master)
 [![npm downloads](https://img.shields.io/npm/dm/fetch-s.svg?style=flat-square)](http://npm-stat.com/charts.html?package=fetch-s)
+[![codebeat badge](https://codebeat.co/assets/svg/badges/A-398b39-669406e9e1b136187b91af587d4092b0160370f271f66a651f444b990c2730e9.svg)](https://codebeat.co/projects/github-com-rekingzhang-fetch-s-master)
 
 Fetch-based HTTP requests
 
@@ -55,9 +56,9 @@ Performing a `POST` request
 
 ```js
 fetchs
-	.post('/user', {
-		firstName: 'Fred',
-		lastName: 'Flintstone'
+	.post('/login', {
+		userName: 'reking',
+		password: 'xxx'
 	})
 	.then(function(response) {
 		console.log(response);
@@ -118,7 +119,7 @@ These are the available config options for making requests. Only the `url` is re
   dataType: 'json',
 
   //`origin` is the request baseURL
-  origin: '', //请求路径源
+  origin: '',
 
   //`mode` is the request mode ("same-origin"、"no-cors"、"cors")
   mode: 'cors', // default

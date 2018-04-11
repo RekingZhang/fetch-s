@@ -1,5 +1,5 @@
 import fetchMock from 'fetch-mock';
-import adc from './../../src/index';
+import fetchs from './../../src/index';
 
 describe('POST单元测试', () => {
 	beforeEach(function() {
@@ -21,7 +21,7 @@ describe('POST单元测试', () => {
 	});
 
 	it('json', async () => {
-		await adc
+		await fetchs
 			.post('http://www.example.com/', {
 				timeout: 1000
 			})
@@ -30,7 +30,7 @@ describe('POST单元测试', () => {
 			});
 	});
 	it('timeout', async () => {
-		await adc
+		await fetchs
 			.post('http://www.example.com/', {
 				dataType: 'json',
 				timeout: 0

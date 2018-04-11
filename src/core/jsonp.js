@@ -60,7 +60,9 @@ function jsonp(opts) {
 				'callback=' +
 				enc(id);
 			// 处理cahce
-			!cacheFlag && (opts.url += '&_=' + new Date().getTime());
+			if(!cacheFlag){
+				opts.url += '&_=' + new Date().getTime();
+			}
 
 			// 创建 script 标签
 			script = document.createElement('script');
