@@ -33,10 +33,7 @@ function request(options) {
 	//处理Body中携带信息
 	if (DATA_IN_BODY.indexOf(methods) !== -1) {
 		options.url = buildURL(options.origin, options.url);
-		options.body = transformRequest(
-			options.data,
-			options.headers['Content-Type']
-		);
+		options.body = transformRequest(options.data, options.headers);
 	}
 
 	//添加异步请求标识

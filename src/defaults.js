@@ -10,8 +10,7 @@ let DEFAULTS = {
 	credentials: 'include', //
 	timeout: 30000, //超时时间
 	headers: {
-		Accept: 'application/json, text/plain, */*',
-		'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+		Accept: 'application/json, text/plain, */*'
 	},
 	XRequestedWith: 'Fetch' //异步请求标识
 };

@@ -8,7 +8,17 @@ import paramsSerializer from './paramsSerializer';
  * @param {Object} headers 请求头
  * @return
  */
-export function transformRequest(data, contentType = '') {
+export function transformRequest(data, headers) {
+	let contentType = headers['Content-Type'];
+
+	//如果已经指定Content-Type，则按照对应的编码格式进行编码
+	if (contentType.indexOf('application/json') !== -1) {
+		return JSON.stringify(data);
+	}
+	if (contentType.indexOf('application/x-www-form-urlencoded') !== -1) {
+		return paramsSerializer(data);
+	}
+
 	if (
 		types.isFormData(data) ||
 		types.isArrayBuffer(data) ||
@@ -21,14 +31,13 @@ export function transformRequest(data, contentType = '') {
 		return data.buffer;
 	}
 
-	if (types.isObject(data)) {
-		return contentType.indexOf('application/json') !== -1
-			? JSON.stringify(data)
-			: paramsSerializer(data);
-	}
-
 	if (types.isURLSearchParams(data)) {
+		headers['Content-Type'] = 'application/x-www-form-urlencoded';
 		return data.toString();
+	}
+	if (types.isObject(data)) {
+		headers['Content-Type'] = 'application/json';
+		return JSON.stringify(data);
 	}
 
 	return data;
