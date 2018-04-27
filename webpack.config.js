@@ -1,5 +1,4 @@
 const path = require('path');
-const pkg = require('./package.json');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin'); //每次构建清理dist目录
 module.exports = {

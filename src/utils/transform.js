@@ -9,7 +9,7 @@ import paramsSerializer from './paramsSerializer';
  * @return
  */
 export function transformRequest(data, headers) {
-	let contentType = headers['Content-Type'];
+	let contentType = headers['Content-Type'] || '';
 
 	//如果已经指定Content-Type，则按照对应的编码格式进行编码
 	if (contentType.indexOf('application/json') !== -1) {
@@ -32,11 +32,12 @@ export function transformRequest(data, headers) {
 	}
 
 	if (types.isURLSearchParams(data)) {
-		headers['Content-Type'] = 'application/x-www-form-urlencoded';
+		headers['Content-Type'] =
+			'application/x-www-form-urlencoded;charset=UTF-8';
 		return data.toString();
 	}
 	if (types.isObject(data)) {
-		headers['Content-Type'] = 'application/json';
+		headers['Content-Type'] = 'application/json;charset=UTF-8';
 		return JSON.stringify(data);
 	}
 

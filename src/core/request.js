@@ -37,7 +37,7 @@ function request(options) {
 	}
 
 	//添加异步请求标识
-	options.headers['X-Requested-With'] = options.XRequestedWith;
+	// options.headers['X-Requested-With'] = options.XRequestedWith;
 
 	//jsonp
 	if (methods === 'JSONP') {

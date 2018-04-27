@@ -2,6 +2,7 @@ import request from './request';
 import Interceptors from './interceptors';
 import types from '../utils/type';
 import DEFAULTS from '../defaults';
+import clone from '../utils/clone';
 
 /**
  * Fetchs Class
@@ -33,7 +34,12 @@ class Fetchs {
 				arguments[1]
 			);
 		}
-		config = Object.assign({}, DEFAULTS, this.defaults, config);
+		config = Object.assign(
+			{},
+			clone(DEFAULTS),
+			clone(this.defaults),
+			config
+		);
 
 		config.method = config.method.toLocaleUpperCase();
 

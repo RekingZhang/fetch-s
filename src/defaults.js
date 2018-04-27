@@ -11,8 +11,7 @@ let DEFAULTS = {
 	timeout: 30000, //超时时间
 	headers: {
 		Accept: 'application/json, text/plain, */*'
-	},
-	XRequestedWith: 'Fetch' //异步请求标识
+	}
 };
 
 export default DEFAULTS;

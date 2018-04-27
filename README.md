@@ -135,12 +135,8 @@ These are the available config options for making requests. Only the `url` is re
 
   // `headers` the headers that the server request with
   headers: {
-	Accept: 'application/json, text/plain, */*',// default
-	'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'// default
-  },
-
-  //`XRequestedWith` is identification of asynchronous requests
-  XRequestedWith: 'Fetch' // default
+	Accept: 'application/json, text/plain, */*'// default
+  }
 }
 ```
 
