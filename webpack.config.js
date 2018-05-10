@@ -2,7 +2,7 @@ const path = require('path');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin'); //每次构建清理dist目录
 module.exports = {
-	entry: './src/index.js',
+	entry: './index.js',
 	output: {
 		filename: 'fetch-s.min.js',
 		library: 'fetchs',

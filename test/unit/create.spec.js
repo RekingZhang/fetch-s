@@ -1,5 +1,5 @@
 import fetchMock from 'fetch-mock';
-import fetchs from './../../src/index';
+import fetchs from './../../src/fetchs';
 
 describe('创建实例单元测试', () => {
 	beforeEach(function() {
