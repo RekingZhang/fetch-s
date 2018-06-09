@@ -1,16 +1,16 @@
 import fetchs from './../../src/fetchs';
 
 // See http://doc.jsfiddle.net/use/echo.html
-let url = 'http://jsfiddle.net/echo/jsonp/?a=1&b=2';
+let url = 'http://jsfiddle.net/echo/jsonp/';
 
 describe('JSONP单元测试', () => {
 	let originalTimeout;
 
-	beforeEach(function() {
+	beforeEach(function () {
 		originalTimeout = jasmine.DEFAULT_TIMEOUT_INTERVAL;
 		jasmine.DEFAULT_TIMEOUT_INTERVAL = 10000;
 	});
-	afterEach(function() {
+	afterEach(function () {
 		jasmine.DEFAULT_TIMEOUT_INTERVAL = originalTimeout;
 	});
 
