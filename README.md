@@ -8,6 +8,18 @@
 
 Fetch-based HTTP requests
 
+[简体中文](/README.zh-CN.md)
+
+## Features
+
+-   Supports the Promise API
+-   Supports `Timeout`
+-   Transform request data
+-   Analysis response data
+-   Interceptor
+-   Custom instance defaults
+-   Supports `JSONP`
+
 ## Installing
 
 Using npm:
