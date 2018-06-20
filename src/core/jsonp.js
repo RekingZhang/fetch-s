@@ -34,22 +34,22 @@ function jsonp(opts) {
 	let script;
 	let timer;
 
-	/* eslint-disable */
-	return new Promise(function(resolve, reject) {
+	function cleanup() {
+		if (script.parentNode) script.parentNode.removeChild(script);
+		window[id] = noop;
+		if (timer) clearTimeout(timer);
+	}
+
+	return new Promise(function (resolve, reject) {
 		try {
-			function cleanup() {
-				if (script.parentNode) script.parentNode.removeChild(script);
-				window[id] = noop;
-				if (timer) clearTimeout(timer);
-			}
 			if (timeout) {
-				timer = setTimeout(function() {
+				timer = setTimeout(function () {
 					cleanup();
 					reject(new Error('Request timed out'));
 				}, timeout);
 			}
 
-			window[id] = function(data) {
+			window[id] = function (data) {
 				cleanup();
 				resolve(data);
 			};
@@ -60,7 +60,7 @@ function jsonp(opts) {
 				'callback=' +
 				enc(id);
 			// 处理cahce
-			if(!cacheFlag){
+			if (!cacheFlag) {
 				opts.url += '&_=' + new Date().getTime();
 			}
 
