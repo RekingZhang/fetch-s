@@ -1,4 +1,6 @@
-import { transformResponse } from './../utils/transform';
+import {
+	transformResponse
+} from './../utils/transform';
 /**
  * 处理response对象
  *
@@ -6,7 +8,7 @@ import { transformResponse } from './../utils/transform';
  * @param {Object} config
  */
 function response(response, config) {
-	let responseContentType = response.headers.get('Content-Type');
+	let responseContentType = response.headers.get('Content-Type') || '';
 
 	//请求信息挂载到response上
 	response.config = config;
