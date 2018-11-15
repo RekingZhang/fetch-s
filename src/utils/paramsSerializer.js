@@ -32,18 +32,18 @@ function paramsSerializer(data) {
 	}
 
 	if (types.isObject(data)) {
-		Object.entries(data).forEach(arr => {
-			let key = arr[0],
-				value = arr[1];
-
-			if (types.isDate(value)) {
-				value = value.toISOString();
+		for (let key in data) {
+			if (data.hasOwnProperty(key)) {
+				let value = data[key];
+				if (types.isDate(value)) {
+					value = value.toISOString();
+				}
+				if (types.isObject(value)) {
+					value = JSON.stringify(value);
+				}
+				parmas.push(encode(key) + '=' + encode(value));
 			}
-			if (types.isObject(value)) {
-				value = JSON.stringify(value);
-			}
-			parmas.push(encode(key) + '=' + encode(value));
-		});
+		}
 		return parmas.join('&');
 	}
 

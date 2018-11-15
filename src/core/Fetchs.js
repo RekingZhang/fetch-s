@@ -3,6 +3,7 @@ import Interceptors from './interceptors';
 import types from '../utils/type';
 import DEFAULTS from '../defaults';
 import clone from '../utils/clone';
+import extend from '../utils/extend';
 
 /**
  * Fetchs Class
@@ -24,7 +25,7 @@ class Fetchs {
 	 */
 	request(config) {
 		if (types.isString(config)) {
-			config = Object.assign(
+			config = extend(
 				{
 					method: 'GET'
 				},
@@ -34,7 +35,7 @@ class Fetchs {
 				arguments[1]
 			);
 		}
-		config = Object.assign(
+		config = extend(
 			{},
 			clone(DEFAULTS),
 			clone(this.defaults),
@@ -77,7 +78,7 @@ class Fetchs {
 	 */
 	get(url, config) {
 		return this.request(
-			Object.assign({}, config, {
+			extend({}, config, {
 				url: url,
 				method: 'GET'
 			})
@@ -93,7 +94,7 @@ class Fetchs {
 	 */
 	post(url, data, config) {
 		return this.request(
-			Object.assign({}, config, {
+			extend({}, config, {
 				url: url,
 				method: 'POST',
 				data: data
@@ -114,7 +115,7 @@ class Fetchs {
 			/* Ignore */
 		}
 		return this.request(
-			Object.assign({}, config, {
+			extend({}, config, {
 				url: url,
 				method: 'JSONP'
 			})
