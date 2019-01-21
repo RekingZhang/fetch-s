@@ -31,7 +31,7 @@ $ npm install fetch-s
 Using CDN:
 
 ```javascript
-<script src="https://unpkg.com/fetch-s/dist/fetch-s.min.js" />
+<script src="https://unpkg.com/fetch-s/dist/fetchs.min.js" />
 ```
 
 ## Example
