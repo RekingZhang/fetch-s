@@ -18,7 +18,8 @@
     "http",
     "fetch",
     "tool",
-    "promise"
+    "promise",
+    "jsonp"
   ],
   "author": "Reking Zhang",
   "license": "MIT",
