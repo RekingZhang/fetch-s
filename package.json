@@ -1,58 +1,59 @@
 {
-  "name": "fetch-s",
-  "version": "1.2.0",
-  "description": "Fetch-based HTTP requests",
-  "main": "dist/fetchs.min.js",
-  "scripts": {
-    "build": "webpack",
-    "test": "karma start test/karma.conf.js",
-    "version": "npm run build && git add -A dist && git add CHANGELOG.md package.json",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
-    "release": "np"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/RekingZhang/fetch-s.git"
-  },
-  "keywords": [
-    "http",
-    "fetch",
-    "tool",
-    "promise",
-    "jsonp"
-  ],
-  "author": "Reking Zhang",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/RekingZhang/fetch-s/issues"
-  },
-  "homepage": "https://github.com/RekingZhang/fetch-s#readme",
-  "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-eslint": "^8.2.2",
-    "babel-loader": "^7.1.4",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-istanbul": "^4.1.5",
-    "babel-preset-env": "^1.6.1",
-    "clean-webpack-plugin": "^0.1.19",
-    "coveralls": "^3.0.0",
-    "eslint": "^4.19.1",
-    "eslint-config-58fe": "^1.0.1",
-    "eslint-plugin-import": "^2.10.0",
-    "fetch-mock": "^6.3.0",
-    "jasmine-core": "^3.1.0",
-    "karma": "^1.7.1",
-    "karma-chrome-launcher": "^2.2.0",
-    "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.1.1",
-    "karma-webpack": "^3.0.0",
-    "regenerator-runtime": "^0.11.1",
-    "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^3.8.1"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
-    }
-  }
+	"name": "fetch-s",
+	"version": "1.2.0",
+	"description": "Fetch-based HTTP requests",
+	"types": "index.d.ts",
+	"main": "dist/fetchs.min.js",
+	"scripts": {
+		"build": "webpack",
+		"test": "karma start test/karma.conf.js",
+		"version": "npm run build && git add -A dist && git add CHANGELOG.md package.json",
+		"coveralls": "cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+		"release": "np"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/RekingZhang/fetch-s.git"
+	},
+	"keywords": [
+		"http",
+		"fetch",
+		"tool",
+		"promise",
+		"jsonp"
+	],
+	"author": "Reking Zhang",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/RekingZhang/fetch-s/issues"
+	},
+	"homepage": "https://github.com/RekingZhang/fetch-s#readme",
+	"devDependencies": {
+		"babel-core": "^6.26.0",
+		"babel-eslint": "^8.2.2",
+		"babel-loader": "^7.1.4",
+		"babel-plugin-add-module-exports": "^0.2.1",
+		"babel-plugin-istanbul": "^4.1.5",
+		"babel-preset-env": "^1.6.1",
+		"clean-webpack-plugin": "^0.1.19",
+		"coveralls": "^3.0.0",
+		"eslint": "^4.19.1",
+		"eslint-config-58fe": "^1.0.1",
+		"eslint-plugin-import": "^2.10.0",
+		"fetch-mock": "^6.3.0",
+		"jasmine-core": "^3.1.0",
+		"karma": "^1.7.1",
+		"karma-chrome-launcher": "^2.2.0",
+		"karma-coverage": "^1.1.1",
+		"karma-jasmine": "^1.1.1",
+		"karma-webpack": "^3.0.0",
+		"regenerator-runtime": "^0.11.1",
+		"uglifyjs-webpack-plugin": "^1.2.4",
+		"webpack": "^3.8.1"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	}
 }
