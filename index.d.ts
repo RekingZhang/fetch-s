@@ -37,13 +37,9 @@ export interface FetchsConfig {
 	data?: any;
 }
 
-export interface FetchsResponse<T = any> {
+export interface FetchsResponse<T = any> extends Response {
 	data: T;
-	status: number;
-	statusText: string;
-	headers: any;
 	config: FetchsConfig;
-	request?: any;
 }
 
 export interface FetchsInterceptor<V> {
