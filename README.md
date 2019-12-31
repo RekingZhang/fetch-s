@@ -146,9 +146,7 @@ These are the available config options for making requests. Only the `url` is re
   timeout: 30000, // default
 
   // `headers` the headers that the server request with
-  headers: {
-	Accept: 'application/json, text/plain, */*'// default
-  }
+  headers: {}
 }
 ```
 

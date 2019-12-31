@@ -141,9 +141,7 @@ fetchs
   timeout: 30000, // default
 
   // `headers` 是服务器请求的标头
-  headers: {
-	Accept: 'application/json, text/plain, */*'// default
-  }
+  headers: {}
 }
 ```
 
