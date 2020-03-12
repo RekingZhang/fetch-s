@@ -16,7 +16,9 @@ export function transformRequest(data, headers) {
 		return JSON.stringify(data);
 	}
 	if (contentType.indexOf('application/x-www-form-urlencoded') !== -1) {
-		return paramsSerializer(data);
+		//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent
+		//对于 application/x-www-form-urlencoded (POST) 这种数据方式，空格需要被替换成 '+'
+		return paramsSerializer(data).replace(/%20/g, '+');
 	}
 
 	if (
