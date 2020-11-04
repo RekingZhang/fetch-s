@@ -25,7 +25,7 @@ export type Redirect = 'follow' | 'error' | 'manual';
 export interface FetchsConfig {
 	url?: string;
 	method?: Method;
-	baseURL?: string;
+	origin?: string;
 	dataType?: ResponseType;
 	origin?: string;
 	mode?: Mode;
