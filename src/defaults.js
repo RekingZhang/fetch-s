@@ -9,7 +9,10 @@ let DEFAULTS = {
 	mode: 'cors', //跨域模式（ "same-origin"、"no-cors"、"cors"）
 	credentials: 'include', //
 	timeout: 30000, //超时时间
-	headers: {}
+	headers: {},
+	validateStatus: function validateStatus(status) {
+		return status >= 200 && status < 300;
+	},
 };
 
 export default DEFAULTS;

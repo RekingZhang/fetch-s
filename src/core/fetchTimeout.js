@@ -1,3 +1,5 @@
+import settle from './settle';
+
 /**
  * fetch的扩展方法
  *
@@ -20,7 +22,7 @@ function _fetch(input, init, timeout) {
 				// 清除定时器
 				clearTimeout(timer);
 				if (!isTimeOut) {
-					resolve(response);
+					settle(resolve, reject, Object.assign(response, {config: init}))
 				}
 			})
 			.catch(function(err) {
